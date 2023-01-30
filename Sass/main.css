@@ -1,0 +1,348 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .menú {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .menú {
+    display: flex;
+  }
+}
+/* Inicio de Index.html*/
+body {
+  background-color: #363636;
+}
+
+/* Cabecera */
+.header {
+  background-color: rgb(38, 43, 63);
+}
+
+header {
+  background-color: #0a1a2a;
+  width: 100%;
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* Menú */
+.menú {
+  margin: 0 auto;
+}
+
+img {
+  width: 180px;
+  height: 80px;
+  float: left;
+  padding: 0;
+}
+
+figure {
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
+figure .blockquote {
+  font-size: 28px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 120px;
+  padding: 25px 0;
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 25px;
+}
+
+nav ul li a::before {
+  display: block;
+  content: "";
+  width: 0%;
+  background: rgb(250, 250, 250);
+  height: 5px;
+  top: 10%;
+  position: absolute;
+  transition: width 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Título */
+h1 {
+  color: black;
+  font-size: 80px;
+  font-family: "Supermercado One", cursive;
+}
+
+/* Fin de Título */
+.imagen-central {
+  width: 500px;
+  height: 400px;
+  margin-top: 100px;
+}
+
+.texto-base {
+  margin-top: 100px;
+  font-size: 25px;
+  grid-gap: 50px;
+}
+
+/* Fin de Index.html*/
+/* Inicio de Galería*/
+.img-galery .img-thumbnail {
+  margin-left: 5%;
+  margin-bottom: 2%;
+  padding: 15px 10px;
+  width: 15%;
+  height: 28vh;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Fin de Galería*/
+/* Inicio de Observamos*/
+.texto-relleno {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 180px;
+}
+
+/* Fin de Observamos*/
+/* Inicio de Colecciones*/
+.container-card .col-md-4 {
+  justify-content: space-around;
+}
+
+.colecc-text {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-right: 120px;
+  padding: 25px 0;
+  float: left;
+  position: initial;
+}
+
+/* Fin de Colecciones*/
+/* Inicio de Inicio sesión*/
+.form-main {
+  min-height: 100vh;
+  padding: 60px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-content .box {
+  border: 1px solid;
+  border-color: #363636;
+  padding: 40px 50px;
+  border-radius: 20px;
+  -webkit-backdrop-filter: #363636;
+          backdrop-filter: #363636;
+}
+
+.form-content h3 {
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.2;
+  color: rgb(18, 17, 16);
+  font-weight: 500;
+}
+
+.form-content form {
+  margin: 25px 0 20px;
+}
+
+.form-content .input-box {
+  margin: 25px;
+}
+
+.form-content .input-control {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #646464;
+  color: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-content .input-control:focus {
+  outline: none;
+}
+
+.form-content .input-link {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.form-content .button-is {
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: linear-gradient(to right, rgb(43, 43, 57), black);
+  border: none;
+  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.form-content .button-is::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+
+.form-content .button-is:hover::before {
+  background-color: #646464;
+}
+
+.form-content p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Fin de Inicio sesión*/
+/* Pie de página */
+.pie-página {
+  margin-top: 500px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+.pie-página .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-página .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-página .grupo-1 .box figure img {
+  width: 200px;
+  height: 200px;
+}
+
+.pie-página .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.pie-página .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie-página .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-página .grupo-1 .red-social i {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-página .grupo-1 .red-social a:hover {
+  color: aquamarine;
+}
+
+.pie-página .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Fin de página *//*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+//Pantallas medianas (tablets)
+@media (max-width: 768px) {
+
+    .menú{
+        display: none;
+    }
+
+}
+
+
+//Pantallas pequeñas (móviles)
+@media (max-width: 320px) {
+
+    .menú{
+        display: flex;
+    }
+}
+
+ 
